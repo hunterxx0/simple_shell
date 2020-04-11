@@ -1,0 +1,66 @@
+.TH hsh 1 "14 April 2020" "1.0" "Simple Shell Manual"
+.SH NAME
+.B hsh
+- A simple UNIX command interpreter (shell).
+.SH SYNOPSIS
+This program don't handle options.
+.SH DESCRIPTION
+This program is a simple shell. It contains basic features and functions found in other shell programs.
+.br
+.br
+.SS OVERVIEW
+.br
+This program take the commands insert by the user and interpret them, and generally executes other commands.
+.br
+.SH MODE
+.B INTERACTIVE
+.br
+    $ ./hsh
+.br
+    (#cisfun$) /bin/ls
+.br
+    hsh main.c shell.c
+.br
+    (#cisfun$)
+.br
+    (#cisfun$) exit
+.br
+    $
+.br
+.B NoN INTERACTIVE
+.br
+    $ echo "/bin/ls" | ./hsh
+.br
+    hsh main.c shell.c test_ls_2
+.br
+    $
+.br
+    $ cat test_ls_2
+.br
+    /bin/ls
+.br
+    /bin/ls
+.br
+    $
+.br
+    $ cat test_ls_2 | ./hsh
+.br
+    hsh main.c shell.c test_ls_2
+.br
+    hsh main.c shell.c test_ls_2
+.br
+    $
+
+.SH BUILT-IN COMMANDS
+.B env
+- prints environment
+.br
+.B exit
+- exits the shell
+
+.SH SEE ALSO
+.I sh(1), Betty(1)
+.SH BUGS
+No known bugs.
+.SH AUTHOR
+Taïb KEFI, Mhamed AZOUZI.
