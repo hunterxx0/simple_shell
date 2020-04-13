@@ -1,5 +1,4 @@
 # SIMPLE SHELL PROJECT
-[TOCM]
 
 ## INTRODUCTION
 Simple shell is a command language interpreter that takes commands from the standard input and executes them. It's written in C language and in Betty coding style. It supports all the commands that can be found in the PATH environment variable.
@@ -23,6 +22,7 @@ Simple shell is a command language interpreter that takes commands from the stan
 `$ ./hsh`
 - ** type your commands for e.g : **
 `$ ls -la `
+
 ###Files
 
 | File name | Functions  | Description                  |
@@ -42,6 +42,7 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 
 ###Functions
+
 | Function name | Description                    |
 | ------------- | ------------------------------ |
 | `main()`      | The Shell's main function.       |
@@ -75,7 +76,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 
 ----
+
 ###Libraries
+
 - ` <stdio.h>`
 - `<stdlib.h>`
 - ` <string.h>`
@@ -85,8 +88,12 @@ Simple shell is a command language interpreter that takes commands from the stan
 - `<sys/stat.h>`
 - `<sys/types.h>`
 - `<signal.h>`
+
 ###Header files
+
 - `<header.h>`
+
 ###Authors:
+
 - **Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo") **
 - **Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail") **
