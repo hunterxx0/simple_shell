@@ -97,5 +97,5 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 ### Authors:
 
-- ** Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo") **
-- ** Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail") **
+#### - Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo")
+#### - Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail")
