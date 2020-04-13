@@ -15,7 +15,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 - Work with the system's environment and use its contents;
 - Manipulate the system's environment: set, unset;
 - Code your simple shell from scratch;
+
 ###How to use
+
 - ** Just Compile all the c files using :**
 `$ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
 - ** Lunch the shell using : **
