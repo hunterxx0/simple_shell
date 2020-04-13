@@ -4,7 +4,7 @@
 Simple shell is a command language interpreter that takes commands from the standard input and executes them. It's written in C language and in Betty coding style. It supports all the commands that can be found in the PATH environment variable.
 
 
-## this project helped us understand how to :
+## This project helped us understand how to :
 - Get to know the basics of the shell.
 - Use PID & PPID.
 - Use system calls.
@@ -16,16 +16,16 @@ Simple shell is a command language interpreter that takes commands from the stan
 - Manipulate the system's environment: set, unset.
 - Code your simple shell from scratch.
 
-###How to use
+### How to use
 
-- ** Just Compile all the c files using :**
+- Just Compile all the c files using :
 `$ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
-- ** Lunch the shell using : **
+- Lunch the shell using :
 `$ ./hsh`
-- ** type your commands for e.g : **
+- type your commands for e.g :
 `$ ls -la `
 
-###Files
+### Files
 
 | File name | Functions  | Description                  |
 | ------- | ----------------- | ------------------------------- |
@@ -43,7 +43,7 @@ Simple shell is a command language interpreter that takes commands from the stan
 |  path.c | `path()` `find_home_path()`  | Contains the path function.       |
 
 
-###Functions
+### Functions
 
 | Function name | Description                    |
 | ------------- | ------------------------------ |
@@ -79,7 +79,7 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 ----
 
-###Libraries
+### Libraries
 
 - ` <stdio.h>`
 - `<stdlib.h>`
@@ -91,11 +91,11 @@ Simple shell is a command language interpreter that takes commands from the stan
 - `<sys/types.h>`
 - `<signal.h>`
 
-###Header files
+### Header files
 
 - `<header.h>`
 
-###Authors:
+### Authors:
 
-- **Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo") **
-- **Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail") **
+- ** Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo") **
+- ** Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail") **
