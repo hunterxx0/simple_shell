@@ -5,16 +5,16 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 
 ## this project helped us understand how to :
-- Get to know the basics of the shell;
-- Use PID & PPID;
-- Use system calls;
--  Execute programs;
-- Create processes;
-- Prioritise processes using Fork and wait;
-- Get and use file information;
-- Work with the system's environment and use its contents;
-- Manipulate the system's environment: set, unset;
-- Code your simple shell from scratch;
+- Get to know the basics of the shell.
+- Use PID & PPID.
+- Use system calls.
+-  Execute programs.
+- Create processes.
+- Prioritise processes using Fork and wait.
+- Get and use file information.
+- Work with the system's environment and use its contents.
+- Manipulate the system's environment: set, unset.
+- Code your simple shell from scratch.
 
 ###How to use
 
