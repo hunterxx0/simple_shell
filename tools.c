@@ -11,23 +11,13 @@
 
 int test_built_in(char *buffer, char **env, his **head)
 {
-	int i = 0, len = 0, j = 0, test = 0;
+	int i = 0, test = 0;
 	char *tmp = NULL;
 
-	for (i = 0; buffer[i]; i++)
-		if (buffer[i] != ' ')
-			len++;
-	if (len == 0)
-		test = 2;
-	if (len != 0)
+	tmp = strip_built_in(buffer);
+
+	if (tmp)
 	{
-		tmp = malloc(len + 1);
-		if (!tmp)
-			return (-1);
-		for (i = 0; buffer[i]; i++)
-			if (buffer[i] != ' ')
-				tmp[j++] = buffer[i];
-		tmp[j] = '\0';
 		if (_strcmp("exit", tmp) == 0)
 			test = 1;
 
@@ -119,6 +109,46 @@ char *strip(char *str)
 
 		p[j] = '\n';
 		p[j + 1] = '\0';
+	}
+
+	return (p);
+}
+
+
+
+/**
+ * strip_built_in - remove spaces at the begining and the end of a string.
+ * @str : string.
+ * Return: void.
+ */
+
+char *strip_built_in(char *str)
+{
+	int i = 0, st = 0, j = 0;
+	char *start = NULL, *p = NULL;
+
+	for (; str[i] && str[i] == ' '; i++)
+		;
+
+	if (str[i])
+	{
+		st = i;
+		start = &str[i];
+
+		for (; str[i]; i++)
+			;
+
+		for (i-- ; str[i] == ' '; i--)
+			;
+
+		p = malloc(i - st + 2);
+		if (!p)
+			return (NULL);
+
+		for (j = 0; j < i - st + 1; j++)
+			p[j] = start[j];
+
+		p[j] = '\0';
 	}
 
 	return (p);
