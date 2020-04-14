@@ -14,7 +14,6 @@ int test_built_in(char *buffer, char **env, his **head)
 	int i = 0, len = 0, j = 0, test = 0;
 	char *tmp = NULL;
 
-	(void)head;
 	for (i = 0; buffer[i]; i++)
 		if (buffer[i] != ' ')
 			len++;
@@ -36,8 +35,8 @@ int test_built_in(char *buffer, char **env, his **head)
 		{
 			for (i = 0; env[i]; i++)
 			{
-				write(STDOUT_FILENO, env[i], _strlen(env[i]));
-				write(STDOUT_FILENO, "\n", 1);
+				_print(env[i]);
+				_print("\n");
 			}
 			test = 2;
 		}
