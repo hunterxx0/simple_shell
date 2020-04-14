@@ -37,7 +37,10 @@ int test_built_in(char *buffer, char **env, his **head)
 		if (_strcmp("env", tmp) == 0)
 		{
 			for (i = 0; env[i]; i++)
-				_print(env[i]), _print("\n");;
+			{
+				_print(env[i]);
+				_print("\n");
+			}
 			test = 2;
 		}
 
