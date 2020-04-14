@@ -36,8 +36,8 @@ int test_built_in(char *buffer, char **env, his **head)
 		{
 			for (i = 0; env[i]; i++)
 			{
-				write(STDOUT_FILENO, env[i], _strlen(env[i]));
-				write(STDOUT_FILENO, "\n", 1);
+				_print(env[i]);
+				_print("\n");
 			}
 			test = 2;
 		}

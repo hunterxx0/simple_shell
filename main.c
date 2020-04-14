@@ -13,7 +13,6 @@ int main(__attribute__ ((unused)) int ac, char **av, char **env)
 	size_t bufsize = 0;
 	int word = 0, characters = 0, test = 0;
 	his *head = NULL;
-	struct stat st;
 
 	while (1)
 	{
@@ -34,12 +33,6 @@ int main(__attribute__ ((unused)) int ac, char **av, char **env)
 				return (0);
 			if (test == 2)
 				continue;
-			if (test == 99)
-			{
-				if (stat("ls;", &st) == 0)
-					perror(av[0]);
-				exit(2);
-			}
 		}
 
 	}
