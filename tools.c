@@ -25,12 +25,10 @@ int test_built_in(char *buffer, char **env, his **head)
 		tmp = malloc(len + 1);
 		if (!tmp)
 			return (-1);
-
 		for (i = 0; buffer[i]; i++)
 			if (buffer[i] != ' ')
 				tmp[j++] = buffer[i];
 		tmp[j] = '\0';
-
 		if (_strcmp("exit", tmp) == 0)
 			test = 1;
 
@@ -38,12 +36,11 @@ int test_built_in(char *buffer, char **env, his **head)
 		{
 			for (i = 0; env[i]; i++)
 			{
-				_print(env[i]);
-				_print("\n");
+				write(STDOUT_FILENO, env[i], _strlen(env[i]));
+				write(STDOUT_FILENO, "\n", 1);
 			}
 			test = 2;
 		}
-
 		if (_strcmp("history", tmp) == 0)
 		{
 			_print_history(head, env);
