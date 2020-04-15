@@ -33,10 +33,12 @@ int test_error(char **b_arr)
 
 int magic(char *buffer, int word, his **head, char **env, char **av)
 {
-	char **b_arr = NULL;
+	char **b_arr = NULL, *tmp = NULL;
 	int i = 0, test = 0;
 
+	tmp = strip_built_in(buffer);
 	b_arr = split(buffer, ';', word);
+	free(tmp);
 	if (test_error(b_arr) != 99)
 	{
 		for (i = 0; b_arr[i]; i++)
@@ -57,7 +59,8 @@ int magic(char *buffer, int word, his **head, char **env, char **av)
 					return (2);
 				}
 			}
-			_exec(av, env, b_arr, word, i);
+			if (word != 0)
+				_exec(av, env, b_arr, word, i);
 		}
 	}
 	else

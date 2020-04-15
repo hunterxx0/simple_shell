@@ -30,7 +30,9 @@ int main(__attribute__ ((unused)) int ac, char **av, char **env)
 		{
 			test = magic(buffer, word, &head, env, av);
 			if (test == 1)
+			{
 				return (0);
+			}
 			if (test == 2)
 				continue;
 		}
