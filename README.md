@@ -16,7 +16,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 - Manipulate the system's environment: set, unset.
 - Code your simple shell from scratch.
 
+
 ### How to use
+
 
 - Just Compile all the c files using :
 `$ gcc -Wall -Werror -Wextra -pedantic *.c -o hsh`
@@ -25,7 +27,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 - type your commands for e.g :
 `$ ls -la `
 
+
 ### Files
+
 
 | File name | Functions  | Description                  |
 | ------- | ----------------- | ------------------------------- |
@@ -43,7 +47,10 @@ Simple shell is a command language interpreter that takes commands from the stan
 |  path.c | `path()` `find_home_path()`  | Contains the path function.       |
 
 
+
 ### Functions
+
+
 
 | Function name | Description                    |
 | ------------- | ------------------------------ |
@@ -79,7 +86,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 ----
 
+
 ### Libraries
+
 
 - ` <stdio.h>`
 - `<stdlib.h>`
@@ -91,11 +100,15 @@ Simple shell is a command language interpreter that takes commands from the stan
 - `<sys/types.h>`
 - `<signal.h>`
 
+
 ### Header files
+
 
 - `<header.h>`
 
+
 ### Authors:
+
 
 #### - Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo")
 #### - Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail")
