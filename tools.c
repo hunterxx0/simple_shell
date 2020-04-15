@@ -11,7 +11,7 @@
 
 int test_built_in(char *buffer, char **env, his **head)
 {
-	int i = 0, test = 0;
+	int test = 0;
 	char *tmp = NULL;
 
 	tmp = strip_built_in(buffer);
@@ -24,15 +24,6 @@ int test_built_in(char *buffer, char **env, his **head)
 		if (_strcmp("history", tmp) == 0)
 		{
 			_print_history(head, env);
-			test = 2;
-		}
-		if (_strcmp("env", tmp) == 0)
-		{
-			for (i = 0; env[i]; i++)
-			{
-				_print(env[i]);
-				_print("\n");
-			}
 			test = 2;
 		}
 	}
