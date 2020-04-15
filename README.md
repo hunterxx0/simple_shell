@@ -1,10 +1,12 @@
 # SIMPLE SHELL PROJECT
 
 ## INTRODUCTION
+
 Simple shell is a command language interpreter that takes commands from the standard input and executes them. It's written in C language and in Betty coding style. It supports all the commands that can be found in the PATH environment variable.
 
 
 ## This project helped us understand how to :
+
 - Get to know the basics of the shell.
 - Use PID & PPID.
 - Use system calls.
@@ -103,12 +105,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 ### Header files
 
-
 - `<header.h>`
 
-
 ### Authors:
-
 
 #### - Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo")
 #### - Mhamed Azouzi - [Mail](mailto:azouzimhamed@gmail.com "Gmail")
