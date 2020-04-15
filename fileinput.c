@@ -22,8 +22,7 @@ void file_exec(char **av, char **lines, char **env, int word)
 			if (test == 1)
 				break;
 			if (test == 2)
-				if (!lines[i + 1])
-					free_mat(lines);
+				continue;
 		}
 		if (word != 0)
 			_exec(av, env, lines, word, i);
@@ -53,6 +52,7 @@ void fileinput(char **av, char **env)
 	w = words(cmd, '\n');
 	lines = split(cmd, '\n', w);
 	file_exec(av, lines, env, w);
-	close(fd);
+	if (close(fd) == -1)
+		perror(av[00]);
 	free_mat(lines);
 }
