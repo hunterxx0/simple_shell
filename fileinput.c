@@ -49,6 +49,7 @@ void fileinput(char **av, char **env)
 	r = read(fd, cmd, 4096);
 	if (r == -1)
 	perror(av[0]);
+	cmd[r] = '\0';
 	w = words(cmd, '\n');
 	lines = split(cmd, '\n', w);
 	file_exec(av, lines, env, w);
