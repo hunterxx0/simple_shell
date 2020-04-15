@@ -25,6 +25,8 @@ int main(__attribute__ ((unused)) int ac, char **av, char **env)
 		if (history(buffer, &head) == 0)
 			continue;
 		buffer[characters - 1] = '\0';
+		if (print_env(buffer, env) == 1)
+			continue;
 		word = words(buffer, ';');
 		if (word != 0)
 		{
