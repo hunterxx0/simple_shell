@@ -20,9 +20,7 @@ void file_exec(char **av, char **lines, char **env, int word)
 		{
 			test = test_built_in(lines[i], env, NULL);
 			if (test == 1)
-				if (!lines[i + 1])
-					free_mat(lines);
-
+				break;
 			if (test == 2)
 				if (!lines[i + 1])
 					free_mat(lines);
