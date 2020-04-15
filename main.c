@@ -16,8 +16,8 @@ int main(int ac, char **av, char **env)
 
 	if (ac == 2)
 	{
-	       fileinput(av, env);
-	       return (0);
+		fileinput(av, env);
+		return (0);
 	}
 	while (1)
 	{
