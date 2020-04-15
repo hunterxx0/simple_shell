@@ -1,14 +1,15 @@
 #include "header.h"
 
 /**
- * print_file - print a file.
- * @t : file path.
- * @lines : number of element of the list.
- * @nb_line : number of lines in the history file.
+ * file_exec - exec from file.
+ * @av : file.
+ * @lines : command list.
+ * @env : env.
+ * @word : number of words.
  * Return: void.
  */
 
-void file_exec(char **av, char **lines,char **env, int word)
+void file_exec(char **av, char **lines, char **env, int word)
 {
 	int i = 0, test = 0;
 
@@ -30,10 +31,9 @@ void file_exec(char **av, char **lines,char **env, int word)
 
 }
 /**
- * print_file - print a file.
- * @t : file path.
- * @lines : number of element of the list.
- * @nb_line : number of lines in the history file.
+ * fileinput - exex a file.
+ * @av : file.
+ * @env : env.
  * Return: void.
  */
 
@@ -48,7 +48,7 @@ void fileinput(char **av, char **env)
 		perror(av[0]);
 	r = read(fd, cmd, 4096);
 	if (r == -1)
-			perror(av[0]);
+	perror(av[0]);
 	w = words(cmd, '\n');
 	lines = split(cmd, '\n', w);
 	file_exec(av, lines, env, w);
