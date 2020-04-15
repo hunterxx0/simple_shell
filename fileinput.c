@@ -20,10 +20,12 @@ void file_exec(char **av, char **lines, char **env, int word)
 		{
 			test = test_built_in(lines[i], env, NULL);
 			if (test == 1)
-				free_mat(lines);
+				if (!lines[i + 1])
+					free_mat(lines);
 
 			if (test == 2)
-				free_mat(lines);
+				if (!lines[i + 1])
+					free_mat(lines);
 		}
 		if (word != 0)
 			_exec(av, env, lines, word, i);
