@@ -7,13 +7,18 @@
  * @env : lists of the envirement variables.
  * Return: 0
  */
-int main(__attribute__ ((unused)) int ac, char **av, char **env)
+int main(int ac, char **av, char **env)
 {
 	char *buffer = NULL;
 	size_t bufsize = 0;
 	int word = 0, characters = 0, test = 0;
 	his *head = NULL;
 
+	if (ac == 2)
+	{
+	       fileinput(av, env);
+	       return (0);
+	}
 	while (1)
 	{
 		signal(SIGINT, csignal);
