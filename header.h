@@ -53,7 +53,7 @@ int list_length(his **);
 void free_all(char *, his **, char **);
 char *strip(char *);
 char *strip_built_in(char *);
-int print_env(char *, char **);
+void print_env(char **);
 void fileinput(char **av, char **env);
 
 #endif
