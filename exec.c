@@ -51,10 +51,8 @@ void _exec(char **av, char **env, char **buffer, int word, int i)
 			path(commands, env, tmp);
 
 		if (tmp[0] != '\0')
-		{
 			execve(tmp, commands, env);
-			if (errno != EACCES) exit(0);
-		}
+		/* if (errno != EACCES) exit(0); */
 		else
 		{
 			if (!buffer[i + 1])
