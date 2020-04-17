@@ -161,5 +161,6 @@ void print_env(char **env)
 		_print(env[i]);
 		_print("\n");
 	}
+	exit(0);
 
 }
