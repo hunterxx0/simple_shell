@@ -152,7 +152,7 @@ char *strip_built_in(char *str)
  * Return: void.
  */
 
-void print_env(char **env)
+int print_env(char **env)
 {
 	int i = 0;
 
@@ -161,6 +161,7 @@ void print_env(char **env)
 		_print(env[i]);
 		_print("\n");
 	}
-	exit(0);
+
+	return (0);
 
 }
