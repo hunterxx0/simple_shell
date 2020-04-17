@@ -148,30 +148,19 @@ char *strip_built_in(char *str)
 /**
  * print_env - print envirement.
  *
- * @buffer : input line.
  * @env : envirement.
  * Return: Number.
  */
 
-int print_env(char *buffer, char **env)
+int print_env(char **env)
 {
-	int test = 0, i = 0;
-	char *tmp = NULL;
+	int i = 0;
 
-	tmp = strip_built_in(buffer);
-	if (tmp)
+	for (i = 0; env[i]; i++)
 	{
-		if (_strcmp("env", tmp) == 0)
-		{
-			for (i = 0; env[i]; i++)
-			{
-				_print(env[i]);
-				_print("\n");
-			}
-			test = 1;
-		}
-		free(tmp);
+		_print(env[i]);
+		_print("\n");
 	}
 
-	return (test);
+	return (0);
 }

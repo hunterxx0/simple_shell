@@ -9,7 +9,7 @@
  */
 int main(__attribute__ ((unused)) int ac, char **av, char **env)
 {
-	char *buffer = NULL;
+	char *buffer = NULL, *tmp = NULL;
 	size_t bufsize = 0;
 	int word = 0, characters = 0, test = 0;
 	his *head = NULL;
@@ -25,8 +25,15 @@ int main(__attribute__ ((unused)) int ac, char **av, char **env)
 		if (history(buffer, &head) == 0)
 			continue;
 		buffer[characters - 1] = '\0';
-		if (print_env(buffer, env) == 1)
+		tmp = strip_built_in(buffer);
+		if (_strcmp("env", tmp) == 0)
+		{
+			print_env(env);
+			free(tmp);
 			continue;
+		}
+		if (tmp)
+			free(tmp);
 		word = words(buffer, ';');
 		if (word != 0)
 		{
