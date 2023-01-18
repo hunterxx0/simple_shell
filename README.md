@@ -107,6 +107,9 @@ Simple shell is a command language interpreter that takes commands from the stan
 
 - `<header.h>`
 
+### Sample:
+![](images/shell.png)
+
 ### Authors:
 
 #### - Taib Kefi  - [Mail](mailto:taibkefi@yahoo.fr "Yahoo")
